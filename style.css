@@ -98,16 +98,18 @@ header a:hover {
     right: 20px;
     bottom: 70px;
 
-    width: 1.6em;
+    width: 2.5rem;
     height: 1.6em;
 }
 
 .button-top a {
-    color: #1A1A1A;
+    color: white;
+    transition: transform 1s ease;
 }
 
 .button-top a:hover {
-    color: #00FFC6;
+    color:  #FF4500;
+    transition: transform 1s;
 }
 /* TÉRMINO HEADER */
 
@@ -189,7 +191,6 @@ header a:hover {
     align-content: flex-start;
 }
 
-
 .profile p {
     font-size: 1.5em;
     font-weight: 400;
@@ -203,12 +204,14 @@ header a:hover {
 
 /* INÍCIO DA MAIN1 [SOBRE] */
 .main1 {
-    display: flex;
-    justify-content: left;
+    display: grid;
+    grid-template-areas: "titulo conteudo";
+    grid-template-columns: 0fr 1fr;
+    align-items: center;
     background-color: #00FFC6;
     border-radius: 50px 0px 0px 0px;
-    margin: 0em 0em 1em 0em;
-    padding: 0rem 2rem 0rem 2rem;
+    margin: 0em 0em 0em 0em;
+    padding: 1rem 2rem 1rem 2rem;
 }
 
 .sobremim-tittle {
@@ -219,7 +222,6 @@ header a:hover {
 }
 
 .main1 h1 {
-    color: white;
     font-size: 4rem;
     font-weight: 600;
     color: #001F33;
@@ -228,20 +230,24 @@ header a:hover {
 }
 
 .sobremim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding-left: 2rem;
     padding-right: 1rem;
 }
 
 .main1 p {
     color: #001F33;
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.8;
+    margin: 0;
 }
 
-.main1 li {
-    color: #001F33;
-    font-size: 20px;
-    font-weight: 300;
+.destaque-sobre-mim {
+    font-size: 1.3em;
 }
 /* TÉRMINO DA MAIN1 [SOBRE] */
 
@@ -250,38 +256,86 @@ header a:hover {
 /* INÍCIO DA MAIN2 [EXPERIENCIAS] */
 .main2 {
     grid-area: main2;
-    display: flex;
-    flex-direction: column;
-    background-color: #FF6B35;
-    margin: 0em 0em 1em 0em;
-    min-height: 500px;
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+    justify-content: left;
+    align-items: center;
+    min-height: 350px;
+    padding: 1rem 0rem 0rem 2rem;
 }
 
 .xp-tittle {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
-    margin-bottom: 0;
-}
-
-.carrossel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
+    writing-mode: sideways-lr;
+    letter-spacing: 5px;
+    padding-right: 4rem;
 }
 
 .main2 h1 {
-    color: black;
-    font-size: 3rem;
+    font-size: 4rem;
+    font-weight: 400;
+    color: #00ffc6;
+
+    margin: 10px;
 }
 
-.main2 h2 {
-    font-size: 2rem;
+.timeline {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  gap: 4em;
+  padding: 4em 2em;
+
+  width: 85%;
 }
 
-.main2 li {
-    font-size: large;
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #00BFFF;
+  z-index: 1;
+}
+
+.evento {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.ponto {
+  width: 20px;
+  height: 20px;
+  background: #001F33;
+  border-radius: 50%;
+  border: 2px solid #00BFFF;
+  margin: 0 auto;
+}
+
+.conteudo {
+  position: absolute;
+  width: 160px;
+  height: 6rem;
+  background: #00BFFF;
+  color: #001F33;
+  border-radius: 10px;
+  padding: 0.5em;
+  font-size: 0.9em;
+  font-weight: 500;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.conteudo.top {
+  top: -120px;
+}
+
+.conteudo.bottom {
+  top: 35px;
 }
 /* TÉRMINO DA MAIN2 [EXPERIÊNCIAS] */
 
@@ -291,41 +345,146 @@ header a:hover {
 .main3 {
     grid-area: main3;
     display: grid;
-    grid-template-areas: "soft sep hard";
-    grid-template-columns: 1fr 0fr 1fr;
+    grid-template-areas:
+    "soft softskill"
+    "hard hardskill";
+    grid-template-columns: 0fr 1fr;
     justify-content: space-between;
     background-color: #001F33;
     border-radius: 0px 0px 0px 50px;
-    margin: 0em 0em 1em 0em;
-    min-height: 500px;
+    margin: 1em 0em 1em 0em;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+.soft-tittle {
+    grid-area: soft;
+    display: flex;
+    justify-content: center;
+    writing-mode: sideways-lr;
+    letter-spacing: 5px;
+    padding-right: 4rem;
+    padding-bottom: 1rem;
+}
+
+.hard-tittle {
+    grid-area: hard;
+    display: flex;
+    justify-content: center;
+    writing-mode: sideways-lr;
+    letter-spacing: 5px;
+    padding-right: 4rem;
+    padding-top: 1rem;
 }
 
 .main3 h1 {
+    font-size: 4rem;
+    font-weight: 400;
     color: white;
-    font-size: 2.5rem;
+
+    margin: 10px;
 }
 
 .soft {
+    grid-area: softskill;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
-.sep {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.soft h3 {
+    color: #00FFC6;
+    border: 1px solid #00FFC6;
+    padding: 0.5em;
+
 }
 
 .hard {
+    grid-area: hardskill;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    gap: 2rem;
 }
 
-.main3 li {
+.skills-active {
+    width: 50px;
     color: white;
 }
+
+.skills-active:hover {
+    color: #00ffc6;   
+}
+
+.skills-deactivate {
+    width: 40px;
+    color: white;
+}
+
+.skills-deactivate:hover {
+    color: #FF6B35;   
+}
+
+.grupo-desenvolvida {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    height: 7rem;
+
+    border: 1px solid #00ffc6;
+    padding: 1rem 2rem 1rem 1rem;
+    margin: 0;
+}
+
+.hard-desenvolvida {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    padding-top: 1rem;
+}
+
+.grupo-nao-desenvolvida {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    height: 7rem;
+
+
+    border: 1px solid #FF6B35;
+    padding: 1rem 2rem 1rem 1rem;
+    margin:  0;
+}
+
+.hard-nao-desenvolvida {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    padding-top: 1rem;
+}
+
+.grupo-desenvolvida h3 {
+    writing-mode: sideways-lr;
+    margin: 0;
+    color: #00FFC6;
+    text-transform: uppercase;
+}
+
+.grupo-nao-desenvolvida h3 {
+    writing-mode: sideways-lr;
+    margin: 0;
+    color: #FF6B35;
+    text-transform: uppercase;
+}
+
+
 /* TÉRMINO DA MAIN3 [HARD & SOFT SKILLS] */
 
 
@@ -334,10 +493,30 @@ header a:hover {
 .main4 {
     grid-area: main4;
     display: flex;
+    align-items: center;
+    text-align: center;
     flex-direction: column;
-    background-color: black;
+    background-color: #FFB300;
+
     margin: 0em 0em 1em 0em;
     min-height: 500px;
+}
+
+.main4 h1 {
+    color: black;
+    font-size: 3rem;
+}
+
+.main4 h2 {
+    font-size: 2rem;
+}
+
+.main4 p {
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-top: 0.5em;
+    padding: 0em 10em 
 }
 
 .devlog-tittle {
@@ -347,21 +526,63 @@ header a:hover {
     margin-bottom: 0;
 }
 
+.experiencias {
+  text-align: center;
+  padding: 2em;
+}
+
+.carrossel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+}
+
 .carrossel {
     display: flex;
+    overflow: hidden;
+    width: 100%;
+    
     justify-content: center;
     align-items: center;
     margin-top: 0;
+    background-color: #FF4500;
 }
 
-.main4 h1 {
-    color: #FF6B35;
-    font-size: 3rem;
+.experiencia {
+  flex: 0 0 100%;
+  display: none;
+  background: #222;
+  color: white;
+  padding: 1.5em;
+  border-radius: 10px;
+  transition: opacity 0.5s ease;
 }
 
-.main4 h2 {
-    font-size: 2rem;
+.experiencia.active {
+  display: block;
 }
+
+button.btn-anterior,
+button.btn-proximo {
+  background-color: #00ffc6;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #00cba9;
+}
+
 
 /* TÉRMINO DA MAIN4 [DEVLOG] */
 
@@ -370,7 +591,11 @@ header a:hover {
 /* INÍCIO DA MAIN5 [PROJETOS] */
 .main5 {
     grid-area: main4;
-    display: flexbox;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+
+    margin: 0em 0em 1em 0em;
 }
 
 .main5 h1 {
