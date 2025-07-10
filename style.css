@@ -1,5 +1,6 @@
 
 :root {
+    font-family: "Roboto Condensed", sans-serif;
     scroll-behavior: smooth;
     /*Faz com a pagina navegue suavemente ao clicar no header*/
 }
@@ -20,7 +21,6 @@
 }
 
 body {
-    font-family: "Roboto Condensed", sans-serif;
     background: linear-gradient(to right, black 15%, #00BFFF 100%);
     margin: 0;
 }
@@ -124,7 +124,7 @@ header a:hover {
     margin: 1em 1em 0em 0em;
     padding-left: 2rem;
     color: white;
-    min-height: 700px;
+    height: 620px;
 }
 
 .hello-world {
@@ -327,7 +327,7 @@ header a:hover {
   padding: 0.5em;
   font-size: 0.9em;
   font-weight: 500;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
 .conteudo.top {
@@ -483,8 +483,6 @@ header a:hover {
     color: #FF6B35;
     text-transform: uppercase;
 }
-
-
 /* TÉRMINO DA MAIN3 [HARD & SOFT SKILLS] */
 
 
@@ -496,10 +494,11 @@ header a:hover {
     align-items: center;
     text-align: center;
     flex-direction: column;
-    background-color: #FFB300;
 
+    background-color: #FFB300;
+    border-radius: 50px 0px 0px 0px;
     margin: 0em 0em 1em 0em;
-    min-height: 500px;
+    min-height: 600px;
 }
 
 .main4 h1 {
@@ -516,7 +515,12 @@ header a:hover {
     font-size: 1.3rem;
     font-weight: 400;
     margin-top: 0.5em;
-    padding: 0em 10em 
+    padding: 0em 10em;
+}
+
+.main4 a {
+    color: white;
+    font-weight: 400;
 }
 
 .devlog-tittle {
@@ -526,64 +530,88 @@ header a:hover {
     margin-bottom: 0;
 }
 
-.experiencias {
-  text-align: center;
-  padding: 2em;
-}
-
-.carrossel-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
-  max-width: 600px;
-  margin: auto;
-  position: relative;
-}
-
-.carrossel {
-    display: flex;
-    overflow: hidden;
+.devlog-carousel {
     width: 100%;
-    
-    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto;
+    padding-bottom: 1em;
+    position: relative;
+    overflow: hidden; /* impede que ultrapasse as margens */
+}
+
+.devlog-carousel p {
+    color: white;
+    line-height: 1.2;
+    font-weight: 200;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    min-height: 400px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    margin-top: 0;
-    background-color: #FF4500;
+    text-align: center;
+    width: 100%;
+    flex-shrink: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #001F33;
+    color: white;
+    border-radius: 10px;
 }
 
-.experiencia {
-  flex: 0 0 100%;
-  display: none;
-  background: #222;
-  color: white;
-  padding: 1.5em;
-  border-radius: 10px;
-  transition: opacity 0.5s ease;
+.navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
 }
 
-.experiencia.active {
-  display: block;
+.navegacao label {
+    width: 14px;
+    height: 14px;
+    background: #888;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-button.btn-anterior,
-button.btn-proximo {
-  background-color: #00ffc6;
-  color: black;
-  border: none;
-  border-radius: 50%;
-  width: 2.5em;
-  height: 2.5em;
-  cursor: pointer;
-  font-size: 1.5em;
-  transition: background-color 0.3s;
+.navegacao label:hover {
+    background: #00ffc6;
 }
 
-button:hover {
-  background-color: #00cba9;
+/* Lógica do carrossel com :checked */
+#slide1:checked ~ .slides {
+    transform: translateX(0%);
+}
+#slide2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+#slide3:checked ~ .slides {
+    transform: translateX(-200%);
 }
 
+/* Slide ativo indicador */
+#slide1:checked ~ .navegacao label[for="slide1"],
+#slide2:checked ~ .navegacao label[for="slide2"],
+#slide3:checked ~ .navegacao label[for="slide3"] {
+    background: #00ffc6;
+}
 
+.slide:nth-child(1) { background: #001F33; }
+.slide:nth-child(2) { background: #003C66; }
+.slide:nth-child(3) { background: #005C99; }
 /* TÉRMINO DA MAIN4 [DEVLOG] */
 
 
@@ -591,15 +619,78 @@ button:hover {
 /* INÍCIO DA MAIN5 [PROJETOS] */
 .main5 {
     grid-area: main4;
-    display: flex;
+    display: grid;
+    grid-template-areas: "apresentacao projetos";
+    grid-template-columns: 1fr 2fr;
     justify-content: space-around;
-    background-color: black;
-
+    background-color: #003C66;
+    
+    border-radius: 0px 0px 0px 50px;
     margin: 0em 0em 1em 0em;
 }
 
-.main5 h1 {
+.apresentacao {
+    grid-area: apresentacao;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 0 1em 0 1em;
+}
+
+.apresentacao h1 {
     color: white;
+    font-size: 5rem;
+    margin-bottom: 0.3em;
+    margin-top: 0;
+
+}
+
+.apresentacao p {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 0.3em;
+    line-height: 1.3;
+}
+
+.apresentacao strong {
+    font-size: 1.8rem;
+    background-color: #001F33;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+
+.projetos {
+    display: flex;
+    background-color: #005C99;
+    border-radius: 1em;
+    border: 0.2em solid white;
+    margin: 1em;
+}
+
+.projeto {
+    margin: 1em;
+}
+
+.projeto h2 {
+    font-size: xx-large;
+    color: white;
+}
+
+.projeto p {
+    color: white;
+    font-size: 1rem;
+}
+
+.projeto a {
+    font-weight: bold;
+    color: #00FFC6;
+}
+
+.imagens {
+    display: flex;
+    align-items: center;
 }
 /* TÉRMINO DA MAIN5 [PROJETOS] */
 
@@ -615,7 +706,6 @@ button:hover {
     background-color: #00BFFF;
     
     border-radius: 2.5em 0em 0em 2.5em;
-    margin-left: 1em;
     padding-left: 2em;
 }
 
@@ -794,3 +884,248 @@ footer img {
     width: 2rem;
 } */
 /* TÉRMINO DO FOOTER */
+
+
+
+/* Dispositivos médios (tablets, 992px a 1199px) */
+@media (max-width: 1024px) {
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "hero"
+        "main1"
+        "main2"
+        "main3"
+        "main4"
+        "main5"
+        "main6"
+        "footer";
+    grid-template-columns: 1fr;
+}
+aside {
+    display: none;
+}
+}
+    
+
+    /* Dispositivos pequenos (tablets pequenos, 768px a 991px) */
+@media (max-width: 991.98px) {
+    .container {
+        grid-template-areas:
+            "header header"
+            "hero hero"
+            "main1 main1"
+            "main2 main2"
+            "main3 main3"
+            "main4 main4"
+            "main5 main5"
+            "main6 main6"
+            "footer footer";
+        grid-template-columns: 1fr;
+    }
+    
+    aside {
+        display: none; /* Esconde o aside em telas menores */
+    }
+    
+    header {
+        padding: 1em 2em;
+    }
+    
+    header ul {
+        gap: 2em;
+    }
+    
+    .hero h1 {
+        font-size: 3.5em;
+    }
+    
+    .hero h2 {
+        font-size: 2.5em;
+    }
+    
+    .profile p {
+        font-size: 1.2em;
+    }
+    
+    .main1, .main2, .main3, .main4, .main5, .main6 {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    .sobremim-tittle, .xp-tittle, .soft-tittle, .hard-tittle {
+        writing-mode: horizontal-tb;
+        padding-right: 0;
+        padding-bottom: 1rem;
+    }
+    
+    .timeline {
+        flex-direction: column;
+        height: auto;
+        gap: 2em;
+        padding: 2em;
+    }
+    
+    .timeline::before {
+        top: 0;
+        left: 50%;
+        width: 1px;
+        height: 100%;
+    }
+    
+    .conteudo.top {
+        top: auto;
+        left: 60px;
+    }
+    
+    .conteudo.bottom {
+        top: auto;
+        left: 60px;
+    }
+    
+    .main4 p {
+        padding: 0em 3em;
+    }
+    
+    .main5 {
+        grid-template-areas: "apresentacao" "projetos";
+        grid-template-columns: 1fr;
+    }
+    
+    .all-contact {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+/* Dispositivos muito pequenos (celulares, até 767px) */
+@media (max-width: 767.98px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1em;
+    }
+    
+    .slogan {
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    
+    .nav-menu {
+        width: 100%;
+    }
+    
+    header ul {
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+        padding: 0;
+    }
+    
+    .hero {
+        grid-template-areas:
+            "about1"
+            "about2"
+            "about4"
+            "about3";
+        grid-template-columns: 1fr;
+        padding-left: 1rem;
+        margin-right: 0;
+    }
+    
+    .my-name {
+        padding: 1rem 0;
+        padding-left: 0;
+    }
+    
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    
+    .hero h2 {
+        font-size: 1.8em;
+    }
+    
+    .profile p {
+        font-size: 1em;
+    }
+    
+    .main1 h1, .main2 h1, .main3 h1 {
+        font-size: 2.5rem;
+    }
+    
+    .main1 p {
+        font-size: 1.1em;
+    }
+    
+    .grupo-desenvolvida, .grupo-nao-desenvolvida {
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .main4 p {
+        padding: 0em 1em;
+        font-size: 1.1rem;
+    }
+    
+    .apresentacao h1 {
+        font-size: 3rem;
+    }
+    
+    .apresentacao p {
+        font-size: 1.2rem;
+    }
+    
+    .projetos {
+        flex-direction: column;
+    }
+    
+    .main6 {
+        border-radius: 0;
+        padding-left: 1em;
+    }
+}
+
+/* Dispositivos extremamente pequenos (até 575px) */
+@media (max-width: 575.98px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+    
+    .hero h2 {
+        font-size: 1.5em;
+    }
+    
+    .destaque {
+        padding: 0 5px;
+    }
+    
+    .main1 h1, .main2 h1, .main3 h1 {
+        font-size: 2rem;
+    }
+    
+    .main4 h1 {
+        font-size: 2rem;
+    }
+    
+    .main4 h2 {
+        font-size: 1.5rem;
+    }
+    
+    .apresentacao h1 {
+        font-size: 2.5rem;
+    }
+    
+    .main6 h1 {
+        font-size: 1.5rem;
+    }
+    
+    .main6 a {
+        width: 130px;
+        font-size: 14px;
+    }
+}
