@@ -512,8 +512,7 @@ header a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-sizing: border-box;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     max-width: 100%;
     padding-top: 1rem;
     gap: 2rem;
@@ -546,7 +545,7 @@ header a:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     box-sizing: border-box;
     max-width: 100%;
     gap: 7rem;
@@ -573,7 +572,7 @@ header a:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     box-sizing: border-box;
     max-width: 100%;
     gap: 7rem;
@@ -588,7 +587,7 @@ header a:hover {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     box-sizing: border-box;
     max-width: 100%;
     color: white;
