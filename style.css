@@ -3,10 +3,13 @@
    Definem fontes, tamanho de fonte e navegação
    ============================================================================================== */
 :root {
-    font-family: "Roboto Condensed", sans-serif;    /* Fonte moderna e legível */
-    font-size: 62.5%;                               /* 1rem = 10px (mais fácil de calcular) */
-    scroll-behavior: smooth;                        /*Faz com a pagina navegue suavemente ao clicar no header*/
-/*    max-width: 1000px;                               Largura máxima do container central */
+    font-family: "Roboto Condensed", sans-serif;
+    /* Fonte moderna e legível */
+    font-size: 62.5%;
+    /* 1rem = 10px (mais fácil de calcular) */
+    scroll-behavior: smooth;
+    /*Faz com a pagina navegue suavemente ao clicar no header*/
+    /*    max-width: 1000px;                               Largura máxima do container central */
 }
 
 /* ==============================================================================================
@@ -16,16 +19,17 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;                           /* Inclui padding e border na largura/altura */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Inclui padding e border na largura/altura */
 }
 
 /* ==============================================================================================
    APAGAR NO FINAL
    ============================================================================================== */
 * {
-/*    outline: 1px solid red; */
+    /*    outline: 1px solid red; */
 }
 
 /* ==============================================================================================
@@ -33,9 +37,13 @@
    Define tipografia, fundo e alinhamento
    ============================================================================================== */
 body {
-    background: linear-gradient(to right, black 15%, #00BFFF 100%);             /* Define o background moderno */
-    min-height: 100vh;                                                              /* Garante altura mínima de tela cheia */
-    font-size: 1.4rem; /* = 14px */                                                 /* Padroniza o tamanho da fonte */
+    background: linear-gradient(to right, black 15%, #00BFFF 100%);
+    /* Define o background moderno */
+    min-height: 100vh;
+    /* Garante altura mínima de tela cheia */
+    font-size: 1.4rem;
+    /* = 14px */
+    /* Padroniza o tamanho da fonte */
 }
 
 /* ==============================================================================================
@@ -43,20 +51,28 @@ body {
    Limita largura e centraliza conteúdo
    ============================================================================================== */
 .container {
-    display: grid;                                  /* Define a estrutura de grid do container */
-    grid-template-areas:                            /* Define a estrutura do grid */
+    display: grid;
+    /* Define a estrutura de grid do container */
+    grid-template-areas:
+        /* Define a estrutura do grid */
         "aside header"
         "aside main"
         "footer footer";
-    grid-template-columns: 7rem 1fr;                /* Define o tamanho das colunas do grid */
-    width: 100%;                                    /* Ocupa 100% da viewport */
-    max-width: 100vw;                               /* Limita a largura máxima de tela cheia */
+    grid-template-columns: 7rem 1fr;
+    /* Define o tamanho das colunas do grid */
+    width: 100%;
+    /* Ocupa 100% da viewport */
+    max-width: 100vw;
+    /* Limita a largura máxima de tela cheia */
 }
 
 section {
-    width: 100%;                                    /* Define o tamanho das seções para 100% da viewport */
-    max-width: 100%;                                /* Define o tamanho máximo das seções para 100% da viewport*/
-    height: auto;                                   /* Define que a altura das seções serão automáticas */
+    width: 100%;
+    /* Define o tamanho das seções para 100% da viewport */
+    max-width: 100%;
+    /* Define o tamanho máximo das seções para 100% da viewport*/
+    height: auto;
+    /* Define que a altura das seções serão automáticas */
 }
 
 /* ==============================================================================================
@@ -76,12 +92,17 @@ section {
    Aparece apenas em telas pequenas
    ============================================================================================== */
 .hamburguer {
-    display: none;                              /* Oculta o menu para telas grandes */
-    font-size: 2.4rem;                          /* Tamanho do botão */
-    cursor: pointer;                            /* Transforma o cursor em pointer */
+    display: none;
+    /* Oculta o menu para telas grandes */
+    font-size: 2.4rem;
+    /* Tamanho do botão */
+    cursor: pointer;
+    /* Transforma o cursor em pointer */
 }
+
 #menu-toggle {
-    display: none;                              /* Esconde checkbox */
+    display: none;
+    /* Esconde checkbox */
 }
 
 /* ==============================================================================================
@@ -95,12 +116,14 @@ section {
     padding-top: 0.8rem;
     gap: 1.2rem;
 }
+
 .slogan h1 {
     font-size: 1rem;
     margin-top: 0;
     line-height: 0.1em;
     font-weight: 400;
 }
+
 .slogan h3 {
     font-size: 1em;
     margin-bottom: 0;
@@ -118,35 +141,43 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 1rem 0rem;
-    height: 6rem;                                   /* Define a altura do header */
+    height: 6rem;
+    /* Define a altura do header */
 
     background: linear-gradient(to right, black 10%, #005F99 100%);
     color: white;
 }
+
 .nav-menu {
-    flex: 1;                                         /* Faz com que o menu ocupe o máximo espaço dentro do container */
+    flex: 1;
+    /* Faz com que o menu ocupe o máximo espaço dentro do container */
     display: flex;
     justify-content: center;
 }
+
 header ul {
     display: flex;
     gap: 10rem;
     font-size: larger;
     list-style: none;
 }
+
 header a {
     font-size: 2rem;
     text-decoration: none;
     text-transform: uppercase;
     color: white;
 }
+
 header li {
     transition: transform 0.3s ease;
 }
+
 header li:hover {
     transform: scale(1.1);
     transition: transform 0.2s;
 }
+
 header a:hover {
     color: #00FFC6;
 }
@@ -162,12 +193,14 @@ header a:hover {
     width: 2.5em;
     height: 1.6em;
 }
+
 .button-top a {
     color: white;
     transition: transform 1s ease;
 }
+
 .button-top a:hover {
-    color:  #FF4500;
+    color: #FF4500;
     transition: transform 1s;
 }
 
@@ -185,12 +218,14 @@ header a:hover {
     color: white;
     width: 100%;
 }
+
 .hello-world {
     grid-area: about1;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
+
 .my-name {
     grid-area: about2;
     display: flex;
@@ -199,11 +234,13 @@ header a:hover {
     align-content: center;
     text-align: center;
 }
+
 .hero h1 {
     font-size: 7rem;
     margin: 0;
     line-height: 1.0;
 }
+
 .destaque {
     background-color: #00FFC6;
     border-radius: 0.5rem;
@@ -212,6 +249,7 @@ header a:hover {
     letter-spacing: 0.8rem;
     font-size: 5rem
 }
+
 .alert {
     background-color: orange;
     border-radius: 0.5rem;
@@ -221,15 +259,18 @@ header a:hover {
     font-size: 2rem;
     line-height: 5rem;
 }
+
 .picture {
     grid-area: about3;
     display: flex;
     justify-content: center;
     margin-top: 0;
 }
+
 .picture img {
     width: 100%;
 }
+
 .profile {
     grid-area: about4;
     display: flex;
@@ -239,11 +280,13 @@ header a:hover {
     text-align: center;
     padding: 2rem;
 }
+
 .profile h2 {
     font-size: 5rem;
     margin-bottom: 0;
     margin-top: 0;
 }
+
 .profile p {
     font-size: 2.2rem;
     font-weight: 400;
@@ -269,11 +312,13 @@ header a:hover {
     padding: 1rem 2rem 1rem 2rem;
     width: 100%;
 }
+
 .sobremim-tittle {
     display: flex;
     justify-content: center;
     writing-mode: sideways-lr;
 }
+
 .sobre-mim h1 {
     font-size: 6rem;
     font-weight: 600;
@@ -283,6 +328,7 @@ header a:hover {
 
     margin: 1rem;
 }
+
 .sobremim {
     display: flex;
     flex-direction: column;
@@ -291,6 +337,7 @@ header a:hover {
     padding-left: 2rem;
     padding-right: 1rem;
 }
+
 .sobre-mim p {
     color: #001F33;
     font-size: 2.4rem;
@@ -298,6 +345,7 @@ header a:hover {
     line-height: 1.8;
     margin: 0;
 }
+
 .destaque-sobre-mim {
     font-size: 3.3rem;
 }
@@ -316,6 +364,7 @@ header a:hover {
     padding: 0rem 0rem 0rem 2rem;
     width: 100%;
 }
+
 .xp-tittle {
     display: flex;
     justify-content: center;
@@ -323,6 +372,7 @@ header a:hover {
     letter-spacing: 0.5rem;
     padding-right: 4rem;
 }
+
 .experiencia h1 {
     font-size: 6rem;
     font-weight: 400;
@@ -330,6 +380,7 @@ header a:hover {
 
     margin: 1rem;
 }
+
 .timeline {
     display: flex;
     justify-content: space-around;
@@ -340,6 +391,7 @@ header a:hover {
     width: 95%;
     height: 100%;
 }
+
 .timeline::before {
     content: "";
     position: absolute;
@@ -350,11 +402,13 @@ header a:hover {
     background: #00BFFF;
     z-index: 1;
 }
+
 .evento {
     position: relative;
     text-align: center;
     z-index: 2;
 }
+
 .ponto {
     width: 2rem;
     height: 2rem;
@@ -363,6 +417,7 @@ header a:hover {
     border: 0.2rem solid #00BFFF;
     margin: 0 auto;
 }
+
 .conteudo {
     position: absolute;
     width: 15rem;
@@ -376,11 +431,13 @@ header a:hover {
     justify-content: center;
     font-size: 1.4rem;
     font-weight: 500;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
+
 .conteudo.top {
     top: -10rem;
 }
+
 .conteudo.bottom {
     top: 4rem;
 }
@@ -394,8 +451,8 @@ header a:hover {
     grid-area: main;
     display: grid;
     grid-template-areas:
-    "soft softskill"
-    "hard hardskill";
+        "soft softskill"
+        "hard hardskill";
     grid-template-columns: 0fr 1fr;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -405,6 +462,7 @@ header a:hover {
     padding: 1rem 2rem 1rem 1.5rem;
     width: 100%;
 }
+
 .soft-tittle {
     grid-area: soft;
     display: flex;
@@ -414,6 +472,7 @@ header a:hover {
     padding-right: 2em;
     padding-bottom: 1em;
 }
+
 .hard-tittle {
     grid-area: hard;
     display: flex;
@@ -423,12 +482,14 @@ header a:hover {
     padding-right: 2em;
     padding-bottom: 1em;
 }
+
 .skills h1 {
     font-size: 6rem;
     font-weight: 400;
     color: white;
     margin: 1rem;
 }
+
 .soft {
     grid-area: softskill;
     display: flex;
@@ -438,39 +499,48 @@ header a:hover {
     max-width: 100%;
     box-sizing: border-box;
 }
+
 .soft h3 {
     color: #00FFC6;
     border: 0.2rem solid #00FFC6;
     padding: 0.5em;
+    text-align: center;
 }
+
 .hard {
     grid-area: hardskill;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     max-width: 100%;
     padding-top: 1rem;
     gap: 2rem;
 }
+
 .hard p {
     padding-top: 0.5rem;
 }
+
 .skills-active {
     width: 5rem;
     color: white;
 }
+
 .skills-active:hover {
-    color: #00ffc6;   
+    color: #00ffc6;
 }
+
 .skills-deactivate {
     width: 5rem;
     color: white;
 }
+
 .skills-deactivate:hover {
-    color: #FF6B35;   
+    color: #FF6B35;
 }
+
 .grupo-desenvolvida {
     display: flex;
     flex-direction: row;
@@ -485,6 +555,7 @@ header a:hover {
     padding: 0.1rem 2rem 1rem 1rem;
     margin: 0;
 }
+
 .hard-desenvolvida {
     display: flex;
     flex-direction: column;
@@ -496,6 +567,7 @@ header a:hover {
     color: white;
     padding-top: 1rem;
 }
+
 .grupo-nao-desenvolvida {
     display: flex;
     flex-direction: row;
@@ -508,8 +580,9 @@ header a:hover {
     height: 13rem;
     border: 0.1rem solid #FF6B35;
     padding: 0.1rem 2rem 1rem 1rem;
-    margin:  0;
+    margin: 0;
 }
+
 .hard-nao-desenvolvida {
     display: flex;
     flex-direction: column;
@@ -521,12 +594,14 @@ header a:hover {
     color: white;
     padding-top: 1rem;
 }
+
 .grupo-desenvolvida h3 {
     writing-mode: sideways-lr;
     margin: 0;
     color: #00FFC6;
     text-transform: uppercase;
 }
+
 .grupo-nao-desenvolvida h3 {
     writing-mode: sideways-lr;
     margin: 0;
@@ -550,13 +625,16 @@ header a:hover {
     width: 100%;
     max-width: 100vw;
 }
+
 .devlog h1 {
     color: black;
     font-size: 6rem;
 }
+
 .devlog h2 {
     font-size: 4rem;
 }
+
 .devlog p {
     color: black;
     font-size: 2rem;
@@ -564,16 +642,19 @@ header a:hover {
     margin-top: 0.5rem;
     padding: 0rem 10rem;
 }
+
 .devlog a {
     color: white;
     font-weight: 400;
 }
+
 .devlog-tittle {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
     margin-bottom: 0;
 }
+
 /* ==============================================================================================
    DEVLOG - CARROSSEL
    Carrossel responsivo
@@ -584,8 +665,10 @@ header a:hover {
     margin: 1rem;
     padding-bottom: 1.5rem;
     position: relative;
-    overflow: hidden; /* impede que ultrapasse as margens */
+    overflow: hidden;
+    /* impede que ultrapasse as margens */
 }
+
 .devlog-carousel p {
     color: white;
     font-size: 1.8rem;
@@ -593,14 +676,17 @@ header a:hover {
     font-weight: 200;
     margin-top: 1.5rem;
 }
+
 input[type="radio"] {
     display: none;
 }
+
 .slides {
     display: flex;
     width: 100%;
     transition: transform 0.5s ease-in-out;
 }
+
 .slide {
     display: flex;
     flex-direction: column;
@@ -615,12 +701,14 @@ input[type="radio"] {
     color: white;
     border-radius: 1rem;
 }
+
 .navegacao {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-top: 2.5rem;
 }
+
 .navegacao label {
     width: 1.4rem;
     height: 1.4rem;
@@ -629,28 +717,43 @@ input[type="radio"] {
     cursor: pointer;
     transition: background 0.3s;
 }
+
 .navegacao label:hover {
     background: #00ffc6;
 }
-#slide1:checked ~ .slides {                     /* Lógica do carrossel com :checked */
+
+#slide1:checked~.slides {
+    /* Lógica do carrossel com :checked */
     transform: translateX(0%);
 }
-#slide2:checked ~ .slides {
+
+#slide2:checked~.slides {
     transform: translateX(-100%);
 }
-#slide3:checked ~ .slides {
+
+#slide3:checked~.slides {
     transform: translateX(-200%);
 }
+
 /* Slide ativo indicador */
-#slide1:checked ~ .navegacao label[for="slide1"],
-#slide2:checked ~ .navegacao label[for="slide2"],
-#slide3:checked ~ .navegacao label[for="slide3"] {
+#slide1:checked~.navegacao label[for="slide1"],
+#slide2:checked~.navegacao label[for="slide2"],
+#slide3:checked~.navegacao label[for="slide3"] {
     background: #00ffc6;
 }
+
 /* Background de cada slide */
-.slide:nth-child(1) { background: #001F33; }
-.slide:nth-child(2) { background: #003C66; }
-.slide:nth-child(3) { background: #005C99; }
+.slide:nth-child(1) {
+    background: #001F33;
+}
+
+.slide:nth-child(2) {
+    background: #003C66;
+}
+
+.slide:nth-child(3) {
+    background: #005C99;
+}
 
 /* ==============================================================================================
    SEÇÃO PROJETOS
@@ -662,10 +765,11 @@ input[type="radio"] {
     grid-template-areas: "apresentacao projetos";
     grid-template-columns: 1fr 2fr;
     background-color: #003C66;
-    
+
     border-radius: 0rem 0rem 0rem 4rem;
     margin: 0rem 0rem 1rem 0rem;
 }
+
 .apresentacao {
     grid-area: apresentacao;
     display: flex;
@@ -682,6 +786,7 @@ input[type="radio"] {
     margin-bottom: 1rem;
     margin-top: 0;
 }
+
 .apresentacao p {
     color: white;
     font-size: 2rem;
@@ -689,12 +794,14 @@ input[type="radio"] {
     margin: 0.6rem;
     line-height: 1.3;
 }
+
 .apresentacao strong {
     font-size: 2.1rem;
     background-color: #001F33;
     padding-left: 0.4rem;
     padding-right: 0.4rem;
 }
+
 .projetos {
     display: flex;
     flex-direction: row;
@@ -705,13 +812,16 @@ input[type="radio"] {
     max-width: 100vw;
     width: 95%;
 }
+
 .projeto {
     margin: 2rem;
 }
+
 .projeto h2 {
     font-size: 4rem;
     color: white;
 }
+
 .projeto p {
     color: white;
     font-size: 1.8rem;
@@ -719,10 +829,12 @@ input[type="radio"] {
     margin-top: 1rem;
     text-align: justify;
 }
+
 .projeto a {
     font-weight: bold;
     color: #00FFC6;
 }
+
 .imagens {
     display: none;
     align-items: center;
@@ -738,15 +850,18 @@ input[type="radio"] {
     border-radius: 5rem 0rem 0rem 5rem;
     padding-left: 3rem;
 }
+
 .contato-title {
     display: flex;
     align-items: center;
     width: 8%;
 }
+
 .contatos h1 {
     color: black;
     font-size: 3rem;
 }
+
 .all-contact {
     display: flex;
     align-items: center;
@@ -754,6 +869,7 @@ input[type="radio"] {
     gap: 15rem;
     width: 100%;
 }
+
 .contatos a {
     display: flex;
     align-items: center;
@@ -771,9 +887,10 @@ input[type="radio"] {
     text-decoration: none;
     cursor: pointer;
 }
+
 .contatos img {
-        width: 2.5rem;
-        border-radius: 0.3rem;
+    width: 2.5rem;
+    border-radius: 0.3rem;
 }
 
 /* ==============================================================================================
@@ -794,12 +911,14 @@ aside {
     text-align: center;
     height: 100vh;
 }
+
 .code-slogan {
     display: flex;
     flex-direction: row;
     justify-content: left;
     gap: 1em;
 }
+
 .icon-code {
     display: flex;
     position: fixed;
@@ -810,60 +929,72 @@ aside {
     width: 3.5rem;
     transition: transform 0.5s ease;
 }
+
 .icon-code:hover {
     color: #00FFC6;
     transform: rotate(91deg);
     transition: transform 0.5s;
 }
+
 aside img:hover {
     transform: scale(1.2);
     transition: transform 0.2s;
 }
+
 .icon-whats {
     width: 2.2rem;
     color: white;
     transition: transform 0.3s ease;
 }
+
 .icon-whats:hover {
     transform: scale(1.2);
     transition: transform 0.3s;
     color: #25d366;
 }
+
 .icon-linkedin {
     width: 2.2rem;
     color: white;
     transition: transform 0.3s ease;
 }
+
 .icon-linkedin:hover {
     transform: scale(1.2);
     transition: transform 0.3s;
     color: #0072b1;
 }
+
 .icon-github {
     width: 2.4rem;
     color: white;
     transition: transform 0.3s ease;
 }
+
 .icon-github:hover {
     transform: scale(1.2);
     transition: transform 0.3s;
     color: orange;
 }
+
 .icon-gmail {
     width: 2.2rem;
     color: white;
     transition: transform 0.3s ease;
 }
+
 .icon-gmail:hover {
     transform: scale(1.2);
     transition: transform 0.3s;
     color: #EA5335;
 }
+
 .icon-cv {
     width: 1.7rem;
     color: white;
     transition: transform 0.3s ease;
 }
+
 .icon-cv:hover {
     transform: scale(1.2);
     transition: transform 0.3s;
@@ -885,22 +1016,10 @@ footer {
     color: white;
     gap: 1rem;
 }
+
 footer img {
     width: 2rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -910,57 +1029,66 @@ footer img {
    ============================================================================================== */
 
 /* ========================================== Tablet Portrait (768x1024) ========================================== */
-@media (max-width: 768px) and (orientation: portrait) {
+@media (max-width: 768px) and (orientation: portrait),
+        (max-width: 1024px) and (orientation: landscape) {
     :root {
-        font-size: 35%; /* Reduz o tamanho base para melhor ajuste */
+        font-size: 35%;
+        /* Reduz o tamanho base para melhor ajuste */
     }
+
     .container {
         grid-template-columns: 1fr;
         grid-template-areas:
-        "header"
-        "hero"
-        "main"
-        "footer";
+            "header"
+            "hero"
+            "main"
+            "footer";
     }
-/* NAVEGAÇÃO PRINCIPAL E RESPONSIVIDADE */
+
+    /* NAVEGAÇÃO PRINCIPAL E RESPONSIVIDADE */
     .slogan {
         display: none;
     }
 
-/* ASIDE */
+    /* ASIDE */
     aside {
         display: none;
     }
 
-/* HERO DE BOAS VINDAS */
+    /* HERO DE BOAS VINDAS */
     .hero {
         padding-left: 1rem;
     }
+
     .my-name h2 {
         font-size: 5rem;
     }
+
     .alert {
         font-size: 1.7em;
     }
 
-/* SEÇÃO SOBRE MIM */
+    /* SEÇÃO SOBRE MIM */
     .sobre-mim p {
         font-size: 2.5rem;
         line-height: 3rem;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
     }
+
     .destaque-sobre-mim {
         font-size: 2.7rem;
     }
+
     .profile h2 {
         font-size: 4rem;
     }
+
     .profile p {
         font-size: 1.5rem;
     }
 
-/* EXPERIENCIAS */
+    /* EXPERIENCIAS */
     .experiencia {
         padding: 0 1.5rem 0 1.5rem;
     }
@@ -971,52 +1099,57 @@ footer img {
         gap: 22.5rem;
     }
 
-/* HARD & SOFT SKILLS */
+    /* HARD & SOFT SKILLS */
     .grupo-desenvolvida {
         gap: 5rem;
     }
+
     .grupo-nao-desenvolvida {
         gap: 5rem;
     }
 
-/* DEVLOG */
+    /* DEVLOG */
     .devlog h2 {
         font-size: 3.5rem;
     }
+
     .devlog p {
-    padding: 0rem 2rem;
+        padding: 0rem 2rem;
     }
 
-/* PROJETOS */
+    /* PROJETOS */
 
-/* CONTATOS */
-.all-contact {
-    gap: 8rem;
-}
+    /* CONTATOS */
+    .all-contact {
+        gap: 8rem;
+    }
 
 
 }
 
 
 /* ========================================== Small Tablet Portrait (600x800) ========================================== */
-@media (max-width: 600px) and (orientation: portrait) { 
+@media (max-width: 600px) and (orientation: portrait),
+        (max-width: 800px) and (orientation: landscape) {
     .container {
         grid-template-areas:
-        "header"
-        "hero"
-        "main"
-        "footer";
+            "header"
+            "hero"
+            "main"
+            "footer";
         grid-template-columns: 1fr;
     }
 
-/* NAVEGAÇÃO PRINCIPAL E RESPONSIVIDADE */
+    /* NAVEGAÇÃO PRINCIPAL E RESPONSIVIDADE */
     .nav-menu {
         justify-content: flex-end;
     }
+
     header ul {
         position: fixed;
         top: 0;
-        left: -100%;                                /* Esconde o menu no lado esquerdo da tela */
+        left: -100%;
+        /* Esconde o menu no lado esquerdo da tela */
         width: 96%;
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.9);
@@ -1027,9 +1160,11 @@ footer img {
         z-index: 100;
         padding-left: 0;
     }
+
     header a {
         font-size: 2.5rem;
     }
+
     .hamburguer {
         display: block;
         z-index: 101;
@@ -1037,137 +1172,146 @@ footer img {
         right: 2rem;
         top: 1.7rem;
     }
-    #menu-toggle:checked ~ .nav-menu ul {           /* Quando o menu está aberto */
-        left: 0;
-    } 
 
-/* ASIDE */
+    #menu-toggle:checked~.nav-menu ul {
+        /* Quando o menu está aberto */
+        left: 0;
+    }
+
+    /* ASIDE */
     aside {
         display: none;
     }
 
-/* HERO DE BOAS VINDAS */
+    /* HERO DE BOAS VINDAS */
     .hero {
-    grid-template-areas:
-        "about1 about2 about2 about2"
-        "about4 about4 about4 about4";
-    grid-template-columns: 0fr 1fr 1fr 1fr;
-    background-image: url("assets/hero6.svg");
-    background-size: 60%;
-    background-repeat: no-repeat;
-    background-position: center;
+        grid-template-areas:
+            "about1 about2 about2 about2"
+            "about4 about4 about4 about4";
+        grid-template-columns: 0fr 1fr 1fr 1fr;
+        background-image: url("assets/hero6.svg");
+        background-size: 60%;
+        background-repeat: no-repeat;
+        background-position: center;
     }
+
     .hello-world {
         grid-area: about1;
     }
+
     .hero h1 {
         font-size: 5rem;
     }
+
     .my-name {
         grid-area: about2;
-    }    
+    }
+
     .profile {
         grid-area: about4;
     }
+
     .profile h2 {
         font-size: 4rem;
     }
+
     .profile p {
         font-size: 1.5rem;
     }
+
     .picture {
         display: none;
     }
+
     .picture img {
         display: none;
     }
 
-/* SEÇÃO SOBRE MIM */
+    /* SEÇÃO SOBRE MIM */
     .sobre-mim p {
         font-size: 1.8rem;
         line-height: 2.5rem;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
     }
+
     .destaque-sobre-mim {
         font-size: 2rem;
     }
 
-/* EXPERIÊNCIAS */
+    /* EXPERIÊNCIAS */
     .timeline {
         display: flex;
         justify-content: flex-start;
         gap: 15.4rem;
     }
 
-/* SOFT & HARD SKILLS */
+    /* SOFT & HARD SKILLS */
     .hard {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
     }
+
     .skills {
         padding: 1.5rem;
     }
+
     .soft {
         flex-wrap: nowrap;
     }
+
     .soft h3 {
         font-size: 1.3rem;
-    }    
+    }
 
-/* DEVLOG */
+    /* DEVLOG */
     .devlog h2 {
         font-size: 3.5rem;
     }
+
     .devlog p {
-    padding: 0rem 1.8rem;
+        padding: 0rem 1.8rem;
     }
 
-/* PROJETOS */
+    /* PROJETOS */
     .apresentacao p {
         font-size: 2.2rem;
     }
 
-/* CONTATOS */
-.all-contact {
-    gap: 4rem;
-}
-.contatos img {
+    /* CONTATOS */
+    .all-contact {
+        gap: 4rem;
+    }
+
+    .contatos img {
         width: 2.4rem;
-}
-
-
-
-
-
-
-
-
-
-
-
+    }
 }
 
 
 /* ========================================== Mobile Portrait (320x480) ========================================== */
-@media (max-width: 320px) and (orientation: portrait) {    
+@media (max-width: 320px) and (orientation: portrait),
+        (max-width: 480px) and (orientation: landscape) {
     .container {
         grid-template-areas:
-        "header"
-        "hero"
-        "main"
-        "footer";
+            "header"
+            "hero"
+            "main"
+            "footer";
         grid-template-columns: 1fr;
     }
 
-/* NAVEGAÇÃO PRINCIPAL E RESPONSIVIDADE */
+    /* NAVEGAÇÃO PRINCIPAL E RESPONSIVIDADE */
     .nav-menu {
         justify-content: flex-end;
     }
+
     header ul {
         position: fixed;
         top: 0;
-        left: -100%;                                /* Esconde o menu no lado esquerdo da tela */
+        left: -100%;
+        /* Esconde o menu no lado esquerdo da tela */
         width: 92%;
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.9);
@@ -1178,9 +1322,11 @@ footer img {
         z-index: 100;
         padding-left: 0;
     }
+
     header a {
         font-size: 2.5rem;
     }
+
     .hamburguer {
         display: block;
         z-index: 101;
@@ -1188,146 +1334,173 @@ footer img {
         right: 2rem;
         top: 1.7rem;
     }
-    #menu-toggle:checked ~ .nav-menu ul {           /* Quando o menu está aberto */
-        left: 0;
-    } 
 
-/* ASIDE */
+    #menu-toggle:checked~.nav-menu ul {
+        /* Quando o menu está aberto */
+        left: 0;
+    }
+
+    /* ASIDE */
     aside {
         display: none;
     }
 
-/* HERO DE BOAS VINDAS */
+    /* HERO DE BOAS VINDAS */
     .hero {
-    grid-template-areas:
-        "about1 about2"
-        "about4 about4";
-    grid-template-columns: 0fr 1fr;
-    background-image: url("assets/hero6.svg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+        grid-template-areas:
+            "about1 about2"
+            "about4 about4";
+        grid-template-columns: 0fr 1fr;
+        background-image: url("assets/hero6.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
     }
+
     .hello-world {
         grid-area: about1;
     }
+
     .hero h1 {
         font-size: 5rem;
     }
+
     .my-name {
         grid-area: about2;
     }
+
     .destaque {
         font-size: 2.9rem;
     }
+
     .alert {
         font-size: 1.5rem;
     }
+
     .profile {
         grid-area: about4;
     }
+
     .profile h2 {
         font-size: 3rem;
     }
+
     .profile p {
         font-size: 1.2rem;
     }
 
-/* SEÇÃO SOBRE MIM */
+    /* SEÇÃO SOBRE MIM */
     .sobre-mim p {
         font-size: 1.5rem;
         line-height: 2.5rem;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
     }
+
     .destaque-sobre-mim {
         font-size: 2rem;
     }
 
-/* EXPERIÊNCIAS */
+    /* EXPERIÊNCIAS */
     .experiencia {
         display: flex;
         flex-direction: column;
         height: 35rem;
     }
+
     .xp-tittle {
         writing-mode: horizontal-tb;
     }
+
     .timeline {
         display: flex;
         justify-content: flex-start;
         gap: 7.2rem;
     }
+
     .conteudo {
         width: 10rem;
     }
 
-/* SOFT & HARD SKILLS */
+    /* SOFT & HARD SKILLS */
     .soft {
         display: flex;
         flex-wrap: wrap;
     }
+
     .soft h3 {
         font-size: 1.3rem;
-    }    
+    }
+
     .hard {
         flex-wrap: wrap;
         gap: 1rem;
     }
-    .skills-active, .skills-deactivate {
+
+    .skills-active,
+    .skills-deactivate {
         width: 3rem;
     }
-    .grupo-desenvolvida, .grupo-nao-desenvolvida {
+
+    .grupo-desenvolvida,
+    .grupo-nao-desenvolvida {
         display: flex;
         justify-content: space-between;
         gap: 1rem;
         width: 100%;
     }
 
-/* DEVLOG */
+    /* DEVLOG */
     .devlog {
         width: 100%;
         max-width: 95.3vw;
     }
+
     .devlog h2 {
         font-size: 3rem;
     }
+
     .devlog p {
-    padding: 0rem 1rem;
+        padding: 0rem 1rem;
     }
 
-/* PROJETOS */
+    /* PROJETOS */
     .projects {
         display: flex;
         flex-direction: column;
     }
 
-/* CONTATOS */
+    /* CONTATOS */
     .contatos {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .contatos h1 {
         margin: 0;
     }
+
     .contato-title {
         display: flex;
         justify-content: center;
         padding-top: 1rem;
         width: 100%;
     }
+
     .all-contact {
         gap: 1rem;
         margin-top: 0;
         padding-bottom: 0.6rem;
     }
+
     .contatos a {
         width: 11rem;
         margin: 0.5rem;
         padding: 0.1rem 0.5rem 0.1rem 1rem;
     }
+
     .contatos img {
-            width: 2.4rem;
+        width: 2.4rem;
     }
 }
