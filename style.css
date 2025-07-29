@@ -6,7 +6,7 @@
     font-family: "Roboto Condensed", sans-serif;    /* Fonte moderna e legível */
     font-size: 62.5%;                               /* 1rem = 10px (mais fácil de calcular) */
     scroll-behavior: smooth;                        /*Faz com a pagina navegue suavemente ao clicar no header*/
-/*    max-width: 1000px;                               Largura máxima do container central */
+    max-width: 1700px;                              /* Largura máxima do container central */
 }
 
 /* ==============================================================================================
