@@ -1062,6 +1062,7 @@ footer img {
 
     /* HERO DE BOAS VINDAS */
     .hero {
+        border: 1px solid pink;
         padding-left: 1rem;
     }
 
@@ -1190,6 +1191,7 @@ footer img {
 
     /* HERO DE BOAS VINDAS */
     .hero {
+        border: 1px solid blue;
         grid-template-areas:
             "about1 about2 about2 about2"
             "about4 about4 about4 about4";
@@ -1352,6 +1354,7 @@ footer img {
 
     /* HERO DE BOAS VINDAS */
     .hero {
+        border: 1px solid red;
         width: 100%;
         max-width: 95.3vw;
 
@@ -1417,6 +1420,7 @@ footer img {
         display: flex;
         flex-direction: column;
         height: 35rem;
+        max-width: 95.3vw;
     }
 
     .xp-tittle {
