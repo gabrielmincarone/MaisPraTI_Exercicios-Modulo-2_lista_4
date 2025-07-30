@@ -139,6 +139,9 @@ header {
 
     background: linear-gradient(to right, black 10%, #005F99 100%);
     color: white;
+
+    width: 100%;
+    max-width: 100vw;
 }
 
 .nav-menu {
@@ -210,6 +213,7 @@ header a:hover {
     justify-content: space-around;
     color: white;
     width: 100%;
+    max-width: 100vw;
 }
 
 .hello-world {
@@ -304,6 +308,7 @@ header a:hover {
     margin: 0;
     padding: 1rem 2rem 1rem 2rem;
     width: 100%;
+    max-width: 100vw;
 }
 
 .sobremim-tittle {
@@ -356,6 +361,7 @@ header a:hover {
     margin-top: 1rem;
     padding: 0rem 0rem 0rem 2rem;
     width: 100%;
+    max-width: 100vw;
 }
 
 .xp-tittle {
@@ -761,6 +767,9 @@ input[type="radio"] {
 
     border-radius: 0rem 0rem 0rem 4rem;
     margin: 0rem 0rem 1rem 0rem;
+
+    width: 100%;
+    max-width: 100vw;
 }
 
 .apresentacao {
@@ -842,6 +851,8 @@ input[type="radio"] {
     background-color: #00BFFF;
     border-radius: 5rem 0rem 0rem 5rem;
     padding-left: 3rem;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .contato-title {
@@ -1467,6 +1478,7 @@ footer img {
     .projects {
         display: flex;
         flex-direction: column;
+        max-width: 95.3vw;
     }
 
     /* CONTATOS */
@@ -1474,6 +1486,7 @@ footer img {
         display: flex;
         flex-direction: column;
         align-items: center;
+        max-width: 95.3vw;
     }
 
     .contatos h1 {
