@@ -54,7 +54,7 @@ body {
         "aside header"
         "aside main"
         "footer footer";
-    grid-template-columns: 7rem 1fr;
+    grid-template-columns: 8vh 1fr;
     /* Define o tamanho das colunas do grid */
     width: 100%;                                    /* Ocupa 100% da viewport */
 }
@@ -134,7 +134,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 1rem 0rem;
-    height: 6rem;
+    height: 7.5vh;
     /* Define a altura do header */
 
     background: linear-gradient(to right, black 10%, #005F99 100%);
@@ -214,6 +214,7 @@ header a:hover {
     color: white;
     width: 100%;
     max-width: 100vw;
+    min-height: 93.5vh;
 }
 
 .hello-world {
@@ -309,6 +310,7 @@ header a:hover {
     padding: 1rem 2rem 1rem 2rem;
     width: 100%;
     max-width: 100vw;
+    min-height: 50vh;
 }
 
 .sobremim-tittle {
@@ -362,6 +364,7 @@ header a:hover {
     padding: 0rem 0rem 0rem 2rem;
     width: 100%;
     max-width: 100vw;
+    min-height: 50vh;
 }
 
 .xp-tittle {
@@ -461,6 +464,7 @@ header a:hover {
     padding: 1rem 2rem 1rem 1.5rem;
     width: 100%;
     max-width: 100vw;
+    min-height: 50vh;
 }
 
 .soft-tittle {
@@ -623,6 +627,8 @@ header a:hover {
     margin: 0rem 0rem 1rem 0rem;
     width: 100%;
     max-width: 100vw;
+    min-height: 50vh;
+    max-height: 100vh;
 }
 
 .devlog h1 {
@@ -770,6 +776,8 @@ input[type="radio"] {
 
     width: 100%;
     max-width: 100vw;
+    min-height: 50vh;
+    max-height: 100vh;
 }
 
 .apresentacao {
@@ -853,6 +861,7 @@ input[type="radio"] {
     padding-left: 3rem;
     width: 100%;
     max-width: 100vw;
+    min-height: 10vh;
 }
 
 .contato-title {
