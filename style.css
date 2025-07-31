@@ -134,7 +134,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 1rem 0rem;
-    min-height: 8vh;
+    min-height: 8.5vh;
     /* Define a altura do header */
 
     background: linear-gradient(to right, black 10%, #005F99 100%);
@@ -153,13 +153,13 @@ header {
 
 header ul {
     display: flex;
-    gap: 10rem;
+    gap: 8rem;
     font-size: larger;
     list-style: none;
 }
 
 header a {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-decoration: none;
     text-transform: uppercase;
     color: white;
@@ -1460,7 +1460,7 @@ footer img {
     .timeline {
         display: flex;
         justify-content: flex-start;
-        gap: 11rem;
+        gap: 10rem;
     }
     .conteudo {
         font-size: 1.8rem;
