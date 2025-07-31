@@ -134,7 +134,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 1rem 0rem;
-    max-height: 7.5vh;
+    min-height: 8vh;
     /* Define a altura do header */
 
     background: linear-gradient(to right, black 10%, #005F99 100%);
@@ -1329,7 +1329,8 @@ footer img {
 
     /* NAVEGAÇÃO PRINCIPAL E RESPONSIVIDADE */
     header {
-        height: 4vh;
+        min-height: 4vh;
+        max-height: 4vh;
     }
     .nav-menu {
         justify-content: flex-end;
@@ -1459,7 +1460,7 @@ footer img {
     .timeline {
         display: flex;
         justify-content: flex-start;
-        gap: 12rem;
+        gap: 11rem;
     }
     .conteudo {
         font-size: 1.8rem;
@@ -1548,7 +1549,7 @@ footer img {
         font-size: 2.7rem;
     }
     .projetos {
-        width: 97%;
+        width: 95%;
     }
     .projeto h2 {
         font-size: 5rem;
@@ -1579,7 +1580,7 @@ footer img {
     }
 
     .all-contact {
-        gap: 5rem;
+        gap: 4rem;
         margin-top: 0;
         padding-bottom: 0.6rem;
     }
