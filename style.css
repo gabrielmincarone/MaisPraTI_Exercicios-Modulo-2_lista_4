@@ -276,7 +276,6 @@ header a:hover {
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    padding: 2rem;
 }
 
 .profile h2 {
@@ -1580,7 +1579,7 @@ footer img {
     }
 
     .all-contact {
-        gap: 4rem;
+        gap: 3rem;
         margin-top: 0;
         padding-bottom: 0.6rem;
     }
